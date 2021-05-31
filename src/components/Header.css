@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#131921;
+}
+.shopname{
+    color: white;
+    margin-left:10px;
+    padding: 5px;
+}
+.login{
+    color: white;
+    margin-right: 10px;
+    padding: 5px;
+}
+.input{
+    display: flex;
+    white-space: nowrap;
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px;
+    flex-grow: 1;
+}
+.inputtext{
+    display: flex;
+    width: auto;
+    flex-grow: 1;
+}
