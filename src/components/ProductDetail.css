@@ -1,0 +1,25 @@
+.card{
+    display: flex;
+    height: 130%;
+    width: 133%;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+.img{
+    height:100%;
+    width: 75%;
+    margin-left: 20px;
+    padding: 10px;
+}
+.rightcard{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+
+}
+.description p{
+    height: 3rem;
+    overflow: hidden;
+
+}

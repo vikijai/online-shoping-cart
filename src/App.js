@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductList from "./components/ProductList";
+import ProductDetail from "./components/ProductDetail";
 function App() {
   return (
     <div className="App">
@@ -9,6 +10,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={ProductList} />
+          <Route path="/product/:productid" exact component={ProductDetail} />
           <Route>404 Not Found!</Route>
         </Switch>
       </Router>
