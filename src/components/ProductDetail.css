@@ -1,5 +1,6 @@
 .card{
     display: flex;
+    flex-direction: column;
     height: 130%;
     width: 133%;
     flex-direction: row;
@@ -16,6 +17,8 @@
     display: flex;
     width: 50%;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
 
 }
 .description p{

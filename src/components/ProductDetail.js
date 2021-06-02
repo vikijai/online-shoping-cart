@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     selectedProduct,
     removeSelectedProduct,
+    addToCart,
 } from "../redux/actions/productaction";
 import "./ProductDetail.css";
 
@@ -20,6 +21,9 @@ const ProductDetail = () => {
                 console.log("Err: ", err);
             });
         dispatch(selectedProduct(response.data));
+    };
+    const additemtocart=()=>{
+        dispatch(addToCart(product));
     };
     useEffect(() => {
         if (productid && productid !== "") fetchProductDetail(productid);
@@ -39,7 +43,7 @@ const ProductDetail = () => {
                 </div>
                 <bold>{price}</bold>
                 <p>{category}</p>
-
+                <button className="button" onClick={additemtocart}>Add To Cart</button>
             </div>
         </div>
     )

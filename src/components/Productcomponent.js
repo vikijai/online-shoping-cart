@@ -9,13 +9,13 @@ const ProductComponent = () => {
     const { id, title, image, price, category } = product;
     return (
       <Link className="link" to={`/product/${id}`}>
-        
-          <div className="card" key={id}>
-            <img className="img" src={image} alt={id} />
-            <bold>{title}</bold>
-            <bold>{price}</bold>
-            <p>{category}</p>
-          </div>
+        <div className="cards" key={id}>
+
+          <img className="imgs" src={image} alt={id} />
+          <bold>{title}</bold>
+          <bold>{price}</bold>
+          <p>{category}</p>
+        </div>
       </Link>
     );
   });
