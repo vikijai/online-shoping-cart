@@ -17,6 +17,7 @@ const ProductComponent = () => {
           <p>{category}</p>
         </div>
       </Link>
+
     );
   });
   return <>{renderList}</>;

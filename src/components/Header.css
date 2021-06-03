@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     background-color:#131921;
+    height: 70px;
 }
 .shopname{
     color: white;
@@ -25,4 +26,9 @@
     display: flex;
     width: auto;
     flex-grow: 1;
+}
+.icon{
+    margin-right: 15px;
+    color: white;
+
 }

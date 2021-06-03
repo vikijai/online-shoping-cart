@@ -25,7 +25,23 @@ export const selectedProductsReducer = (state = [], { type, payload }) => {
 export const addtocartReducer = (state = [], { type, payload }) => {
   switch (type) {
     case ActionTypes.ADD_TO_CART:
-      return { ...state, product: payload };
+      return [...state, payload ];
+    default:
+        return state;
+  }
+};
+export const removefromReducer=(state=[],{type,payload})=>{
+  switch(type){
+    case ActionTypes.REMOVE_FROM_CART:
+      const index=state.product.findIndex((item)=>item.id===payload.id);
+      let newcart=[...state];
+      if(index>=0){
+        newcart.splice(index,1);
+      }
+      else{
+        console.warn(`cant remove`);
+      }
+      return state=newcart;
     default:
       return state;
   }

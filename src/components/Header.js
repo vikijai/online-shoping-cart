@@ -1,13 +1,11 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 // import { addToCart } from "../redux/actions/productaction";
+import {Icon} from "semantic-ui-react";
 import "./Header.css"
+import { Link } from "react-router-dom";
 const Header = () => {
   const cartitem=useSelector((state) => state.cart);
-  useEffect(()=>{
-    console.log(cartitem.length);
-
-  },[cartitem]);
   return (  
       <div className="header"> 
         <div className="shopname">
@@ -19,10 +17,12 @@ const Header = () => {
         <div className="login">
           <p className="logintext">hello vignesh</p>
         </div>
-        <div>
-          <img scr="../images/cart.png" alt="Cart"/>
-        </div>
-        {cartitem.length}
+        <Link to={`/cart`}>
+          <div className="icon">
+          <Icon className="shopping cart" /> 
+          {cartitem.length}
+          </div>
+        </Link>
       </div>
   );
 };

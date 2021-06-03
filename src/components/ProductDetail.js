@@ -8,6 +8,7 @@ import {
     addToCart,
 } from "../redux/actions/productaction";
 import "./ProductDetail.css";
+import { Button } from 'semantic-ui-react'
 
 const ProductDetail = () => {
     let product = useSelector((state) => state.product);
@@ -43,7 +44,8 @@ const ProductDetail = () => {
                 </div>
                 <bold>{price}</bold>
                 <p>{category}</p>
-                <button className="button" onClick={additemtocart}>Add To Cart</button>
+                <Button onClick={additemtocart} secondary>Add To Cart</Button>
+
             </div>
         </div>
     )
