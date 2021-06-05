@@ -1,38 +1,46 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import { useSelector } from "react-redux";
-import { Button } from 'semantic-ui-react'
-import { removeFromCart } from '../redux/actions/productaction';
+import CartProduct from './CartProduct';
+import "./cart.css";
+//import { total } from '../redux/actions/productaction';
+// import { total } from '../redux/reducers/Productreducer';
 function Cart() {
-    const dispatch=useDispatch();
+
     const cartitem = useSelector((state) => state.cart);
-    console.log(cartitem)
-    const renderList = cartitem.map((item) => {
-        const { id, title, image,description, price, category } = item;
-        
-        const removeitemtocart=()=>{
-            dispatch(removeFromCart({id}));
-        };
-        return (
-            <div className="cardcard">
-                <div className="leftcard">
-                    <img className="img" src={image} alt={id} />
-                </div>
-                <div className="rightcard">
-                    <div> <bold>{title}</bold></div>
-                    <div className="description">
-                        <p>{description}</p>
-                    </div>
-                    <bold>{price}</bold>
-                    <p>{category}</p>
-                    <Button onClick={removeitemtocart} secondary>Remove from Cart</Button>
+    //console.log(cartitem)
+    // let total=0;
+    return (
 
-                </div>
+        <div className="cartcard">
+            <div>
+                {
+                    cartitem.map((item, i) =>
+                    (
+
+                        <CartProduct key={i} id={item.id} title={item.title} image={item.image} description={item.description} price={item.price} category={item.category} />
+                    )
+
+
+
+
+                    )
+                }
             </div>
+            <div className="rightcart">
+                <h2>
+                    Total:
+                    {
+                        cartitem.reduce((total, item) =>
+                            total = total + item.price
 
-        );
-    });
-    return <>{renderList}</>;
+                            , 0)
+                    }
+                </h2>
+
+            </div>
+        </div>
+
+    );
 }
 
 export default Cart

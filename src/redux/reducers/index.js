@@ -4,5 +4,6 @@ const reducers = combineReducers({
   allProducts: productsReducer,
   product: selectedProductsReducer,
   cart:addtocartReducer,
+
 });
 export default reducers;

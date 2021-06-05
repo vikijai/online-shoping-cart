@@ -1,16 +1,15 @@
 .card{
     display: flex;
-    flex-direction: column;
-    height: 130%;
-    width: 90%;
+    height: 900px;
+    width: 120%;
     flex-direction: row;
-    align-content: center;
-    flex-wrap: nowrap;
+    padding: 10px;
+    margin-left: 70px;
 }
-.img{
-    height:100%;
-    width: 75%;
-    margin-left: 20px;
+.leftcard{
+    height: 377px;
+    width: 323px;
+    margin-top: 237px;
     padding: 10px;
 }
 .rightcard{
@@ -19,6 +18,7 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    padding: 40px;
 
 }
 .description p{

@@ -38,11 +38,11 @@ const ProductDetail = () => {
                 <img className="img" src={image} alt={id} />
             </div>
             <div className="rightcard">
-                <div> <bold>{title}</bold></div>
+                <h2>{title}</h2>
                 <div className="description">
                     <p>{description}</p>
                 </div>
-                <bold>{price}</bold>
+                <h3>{price}</h3>
                 <p>{category}</p>
                 <Button onClick={additemtocart} secondary>Add To Cart</Button>
 
